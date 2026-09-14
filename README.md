@@ -1,31 +1,68 @@
 # Spring AI Chatbot
 
-A simple AI chatbot built with **Spring Boot, Spring AI, and OpenAI/OpenRouter**.
+An AI-powered chatbot and website builder built with **Spring Boot, Spring AI, Java, and OpenRouter**.
 
-This is my first Spring AI project, created to understand conversation history, context, system instructions, memory, streaming, hallucinations, and tool calling.
+This project was created to explore core Spring AI concepts such as conversation history, chat memory, system instructions, streaming, hallucinations, and AI tool calling.
 
 ## Features
 
 * AI-powered chatbot
-* Conversation history
-* System instructions
-* Chat memory
-* REST API
-* OpenAI/OpenRouter API integration
+* Conversation history and chat memory
+* System instructions and context handling
+* Streaming responses
+* REST API integration
+* OpenRouter / OpenAI-compatible API support
 * External tool calling
-* Calculator Tool
-* Currency Exchange Tool
-* Weather Tool
 * Multiple tool support for multi-step requests
+* AI-powered website generation
 
-Get an API key from OpenAI Platform or OpenRouter and configure it in the application.
+The AI automatically selects and calls the appropriate tool based on the user's request.
 
-## External Tools
+* **Calculator Tool** — Performs arithmetic calculations
+* **Currency Exchange Tool** — Handles currency conversion and exchange rates
+* **Weather Tool** — Provides current weather information
+* **Website Tools** — Creates directories and generates HTML, CSS, and JavaScript files
 
-The chatbot can use external tools when required:
+## AI Website Builder
 
-* **Calculator Tool** — Performs arithmetic calculations.
-* **Currency Exchange Tool** — Handles currency conversion and exchange-rate requests.
-* **Weather Tool** — Provides current weather information.
+Describe the website you want in natural language, and the AI can generate the required website files.
 
-The AI automatically selects the appropriate tool based on the user's request and uses the tool results to generate the final response.
+Example:
+
+```text
+Create a modern portfolio website for a Java developer.
+```
+
+The AI can create and manage files inside the `generated-sites` workspace.
+
+## Tech Stack
+
+* Java
+* Spring Boot
+* Spring AI
+* OpenRouter
+* Maven
+* WeatherAPI
+* Frankfurter API
+* HTML, CSS, JavaScript
+
+## Configuration
+
+Configure your API keys using environment variables:
+
+```properties
+spring.ai.openai.api-key=${OPENROUTER_API_KEY}
+weather.api.key=${WEATHER_API_KEY}
+```
+
+## Learning
+
+This project helped me understand:
+
+* Spring AI and ChatClient
+* system instructions
+* Conversation memory
+* Tool calling
+* External API integration
+* Multi-step AI workflows
+* AI-assisted website generation

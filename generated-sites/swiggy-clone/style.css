@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #fafafa;
+    color: #333;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff4136;
+    padding: 1rem 2rem;
+    color: white;
+}
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.search-bar {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 1rem;
+    display: flex;
+}
+.search-bar input {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+}
+.search-bar button {
+    padding: 0.75rem 1.2rem;
+    background-color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+.icons a {
+    margin-left: 0.8rem;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+.hero {
+    background: linear-gradient(135deg, #ff4136, #ff6f61);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+.btn-primary {
+    background-color: white;
+    color: #ff4136;
+    border: none;
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn-primary:hover {
+    background-color: #f2f2f2;
+}
+.categories {
+    padding: 2rem;
+    background-color: #fff;
+}
+.categories h2 {
+    margin-bottom: 1rem;
+}
+.filter-options {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.filter-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: #ff4136;
+    color: white;
+}
+.restaurants {
+    padding: 2rem;
+}
+.restaurants h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.restaurant-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.restaurant-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.restaurant-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.restaurant-card h3 {
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+.restaurant-card p {
+    margin: 0 1rem 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+.price {
+    margin: 0 1rem 0.5rem;
+    font-weight: bold;
+    color: #ff4136;
+}
+.btn-add {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 0.5rem 1rem 1rem;
+    padding: 0.6rem;
+    background-color: #ff4136;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-add:hover {
+    background-color: #e63c30;
+}
+
+/* Cart Panel */
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -360px;
+    width: 340px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+    padding: 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
+.cart-panel.active {
+    right: 0;
+}
+.cart-panel h2 {
+    margin-bottom: 1rem;
+}
+#cart-items .cart-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+#cart-items .cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 0.8rem;
+    border-radius: 4px;
+}
+#cart-items .cart-item div {
+    flex: 1;
+}
+#cart-items .cart-item .remove {
+    background: none;
+    border: none;
+    color: #ff4136;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#cart-total {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: right;
+}
+#checkout-btn {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    background-color: #ff4136;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#checkout-btn:hover {
+    background-color: #e63c30;
+}
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    color: #666;
+}
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #222;
+    color: #ddd;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+    .search-bar {
+        margin-top: 1rem;
+        width: 100%;
+        max-width: none;
+    }
+    .icons {
+        margin-top: 1rem;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+}

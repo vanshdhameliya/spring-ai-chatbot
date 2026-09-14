@@ -1,4 +1,4 @@
-package tech.logicforge.chatbot;
+package tech.logicforge.chatbot.service;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.messages.AssistantMessage;

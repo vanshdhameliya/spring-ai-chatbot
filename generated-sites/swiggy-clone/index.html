@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">Swiggy</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for food, restaurants & more...">
+            <button class="search-btn">Search</button>
+        </div>
+        <div class="icons">
+            <a href="#"><i class="icon-phone">📞</i></a>
+            <a href="#"><i class="icon-cart">🛒</i></a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Food Delivered in Minutes</h1>
+        <p>Choose from top restaurants, enjoy exclusive deals, and get your order fast.</p>
+        <button class="btn-primary">Get Started</button>
+    </section>
+
+    <!-- Category Filters -->
+    <section class="categories">
+        <div class="filter">
+            <h2>Categories</h2>
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pizza">Pizza</button>
+                <button class="filter-btn" data-filter="biryani">Biryani</button>
+                <button class="filter-btn" data-filter="burger">Burger</button>
+                <button class="filter-btn" data-filter="sweet">Sweets</button>
+                <button class="filter-btn" data-filter="drinks">Drinks</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant List -->
+    <section class="restaurants">
+        <h2>Popular Restaurants</h2>
+        <div class="restaurant-grid">
+            <!-- Restaurant Card 1 -->
+            <div class="restaurant-card" data-category="pizza">
+                <img src="https://images.unsplash.com/photo-1606744038132-65d714a5bf74?auto=format&fit=crop&w=300&q=60" alt="Pizza Hut">
+                <h3>Pizza Hut</h3>
+                <p>4.5★ • 2.3K reviews</p>
+                <p class="price">₹ 1500</p>
+                <button class="btn-add">Add to Cart</button>
+            </div>
+
+            <!-- Restaurant Card 2 -->
+            <div class="restaurant-card" data-category="biryani">
+                <img src="https://images.unsplash.com/photo-1606744822632-d68292c34b59?auto=format&fit=crop&w=300&q=60" alt="Biryani House">
+                <h3>Biryani House</h3>
+                <p>4.8★ • 1.7K reviews</p>
+                <p class="price">₹ 1200</p>
+                <button class="btn-add">Add to Cart</button>
+            </div>
+
+            <!-- Restaurant Card 3 -->
+            <div class="restaurant-card" data-category="burger">
+                <img src="https://images.unsplash.com/photo-1556912187-3a4c5b5c8b57?auto=format&fit=crop&w=300&q=60" alt="Burger King">
+                <h3>Burger King</h3>
+                <p>4.2★ • 1.2K reviews</p>
+                <p class="price">₹ 1300</p>
+                <button class="btn-add">Add to Cart</button>
+            </div>
+
+            <!-- Restaurant Card 4 -->
+            <div class="restaurant-card" data-category="sweet">
+                <img src="https://images.unsplash.com/photo-1606744626172-0c555a02c56c?auto=format&fit=crop&w=300&q=60" alt="Sweet Treats">
+                <h3>Sweet Treats</h3>
+                <p>4.6★ • 850 reviews</p>
+                <p class="price">₹ 900</p>
+                <button class="btn-add">Add to Cart</button>
+            </div>
+
+            <!-- Restaurant Card 5 -->
+            <div class="restaurant-card" data-category="drinks">
+                <img src="https://images.unsplash.com/photo-1510721305324-67796a451b3b?auto=format&fit=crop&w=300&q=60" alt="Coffee House">
+                <h3>Coffee House</h3>
+                <p>4.3★ • 1.5K reviews</p>
+                <p class="price">₹ 700</p>
+                <button class="btn-add">Add to Cart</button>
+            </div>
+
+            <!-- Add more cards as needed -->
+        </div>
+    </section>
+
+    <!-- Cart -->
+    <aside class="cart-panel" id="cart-panel">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+            <!-- Cart items will be added here -->
+        </div>
+        <p id="cart-total">Total: ₹0</p>
+        <button class="btn-primary" id="checkout-btn">Checkout</button>
+        <button class="btn-close" id="close-cart">&times;</button>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Swiggy Clone. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

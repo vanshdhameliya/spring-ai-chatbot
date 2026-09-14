@@ -1,6 +1,7 @@
-package tech.logicforge.chatbot;
+package tech.logicforge.chatbot.controller;
 
 import org.springframework.web.bind.annotation.*;
+import tech.logicforge.chatbot.service.ChatService;
 
 @CrossOrigin(origins = "*")
 @RestController

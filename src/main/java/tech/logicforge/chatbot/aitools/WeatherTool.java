@@ -15,9 +15,7 @@ public class WeatherTool {
     public WeatherTool(RestClient.Builder builder,
                         @Value("${weather.api.key}") String apiKey) {
 
-        this.restClient = builder.
-                baseUrl("https://api.weatherapi.com/v1")
-                .build();
+        this.restClient = builder.baseUrl("https://api.weatherapi.com/v1").build();
         this.apiKey = apiKey;
     }
 
